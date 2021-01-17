@@ -1,21 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <% include ../includes/header.ejs %>
 </head>
 
 <body>
   <% include ../includes/nav.ejs %>
-<div class="jumbotron text-center">
-  <div class="container">
-    <h1><%= title %></h1>
-    <p>This is the placeholder for Team Activity 02</p>
-  </div>
-</div>
-<div class="container">
-  
-</div>
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1>
+          <%= title %>
+        </h1>
+        <form action="/ta02/addUser" method="POST">
+          <input type="text" name="user" style="color: black;">
+          <input type="submit" value="Add User" style="color: black;">
+        </form>
+        <div>
+        <% if (users.length> 0) { %>
+          <% users.forEach(user=> { %>
+            <p>User: <%= user %></p>
+          <% }) %>
+        <% } else { %>
+          <p>No Users Found</p>
+        <% } %>
+        </div>
+
+        <form action="/ta02/removeUser" method="POST">
+          <input type="text" name="user" style="color: black;">
+          <input type="submit" value="Delete User" style="color: black;">        
+        </form>
+      </div>
+    </div>
+    <div class="container">
+
+    </div>
 
 
 </body>
+
 </html>
