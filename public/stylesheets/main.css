@@ -1,5 +1,5 @@
 .jumbotron {
-  background: #0065BD;
+  background: #CCCCFF;
   color: white;
   padding-bottom: 80px; 
 }
@@ -14,7 +14,7 @@
 }
   
 .jumbotron p {
-  color: #d9ccee;
+  color: navy;
   max-width: 75%;
   margin: 1em auto 2em; 
 }
@@ -40,4 +40,26 @@
 .logo {
   width: 5rem;
   height: 5rem;
+}
+
+.pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.pagination a {
+  text-decoration: none;
+  background: #CCCCFF;
+  color: navy;
+  padding: 0.5rem;
+  border: 1px solid navy;
+  margin: 0 1rem;
+}
+
+.pagination a:hover,
+.pagination a:active,
+.pagination a.active {
+  background: navy;
+  color: #CCCCFF;
+  border: 1px solid #CCCCFF;  
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+  <style>
+    body, .jumbotron {
+      background-color: <%= style %>;
+    }
+
+  </style>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+    <form action="/ta05/change-style" method="POST">
+      <input type="submit" value="Change Style" class="btn btn-primary">
+      <input type="color" name='style' value="<%= style %>">
+    </form>
+    <p><b>Counter: <%= counter %></b></p>
+    <form action="/ta05/counter" method="POST">
+      <input type="submit" value="Increment Counter" name="increment" class="btn btn-primary">
+    </form>
+    <form action="/ta05/counter" method="POST">
+      <input type="submit" value="Decrement Counter" name="decrement" class="btn btn-primary">
+    </form>
+    <a class="btn btn-primary" href="/ta05/reset">Reset Session</a>
+  </div>
+</div>
+<div class="container">
+  
+</div>
+
+
+</body>
+</html>
