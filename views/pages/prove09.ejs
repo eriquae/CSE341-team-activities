@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../includes/header.ejs %>
+</head>
+
+<body>
+  <% include ../includes/nav.ejs %>
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1><%= title %></h1>
+    <div id="products">
+    </div>
+  </div>
+</div>
+<div class="container">
+  
+</div>
+<section class="pagination">
+  <button class="btn btn-primary" onclick="getPokemon(this)" id="previous">Previous</button>
+  <button class="btn btn-primary" onclick="getPokemon(this)" id="next">Next</button>
+</section>
+
+<script src="/scripts/prove09.js"></script>
+</body>
+</html>
