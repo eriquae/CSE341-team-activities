@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include ../includes/header.ejs %>
+    <style>
+        ul,li { list-style-type: none;
+        list-style-position:inside;
+        margin:0;
+        padding:0; }
+    </style>
+</head>
+
+<body>
+    <% include ../includes/nav.ejs %>
+        <div class="jumbotron text-center">
+            <div class="container">
+                <h1>
+                    <%= title %>
+                </h1>
+                <div>
+                    <input type="text" id="newNames" class="form-control">
+                    <input type="button" value="Add Name" onclick="insertHeroes()" class="btn btn-primary">
+                </div>
+                <div id="heroes">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/scripts/prove11.js"></script>
+</body>
+
+</html>

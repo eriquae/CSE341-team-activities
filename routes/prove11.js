@@ -5,9 +5,9 @@ const router = express.Router();
 const dummyData = require('./../data/dataHeroes.json')
 
 router.get('/', (req, res, next) => {
-    res.render('pages/prove10', {
-        title: 'Prove 10',
-        path: '/prove10',
+    res.render('pages/prove11', {
+        title: 'Prove 11',
+        path: '/prove11',
     });
 });
 
